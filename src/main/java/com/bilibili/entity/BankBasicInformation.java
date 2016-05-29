@@ -23,7 +23,7 @@ import javax.persistence.Table;
     ,catalog="BILIBILI"
 )
 
-public class BankBaisicInformation  implements java.io.Serializable {
+public class BankBasicInformation  implements java.io.Serializable {
 
 
     // Fields    
@@ -43,17 +43,15 @@ public class BankBaisicInformation  implements java.io.Serializable {
      private String interestRateGeneral;
      private String interestRateOverspend;
      private String hasOnlineBank;
-     private BankAccountMgmt bankAccountMgmt;
-
-
+  
     // Constructors
 
     /** default constructor */
-    public BankBaisicInformation() {
+    public BankBasicInformation() {
     }
 
 	/** minimal constructor */
-    public BankBaisicInformation(String bankName, String bankLogoPath, String openCloseTimeAndDay, String openAccountReturn, String yearlyFee, String internationalTransferFee, String spendingLimitPerMonth, String cashWithdrawLimitPerMonth, String overspendLimit, String interestRateYouth, String interestRateGeneral, String interestRateOverspend, String hasOnlineBank) {
+    public BankBasicInformation(String bankName, String bankLogoPath, String openCloseTimeAndDay, String openAccountReturn, String yearlyFee, String internationalTransferFee, String spendingLimitPerMonth, String cashWithdrawLimitPerMonth, String overspendLimit, String interestRateYouth, String interestRateGeneral, String interestRateOverspend, String hasOnlineBank) {
         this.bankName = bankName;
         this.bankLogoPath = bankLogoPath;
         this.openCloseTimeAndDay = openCloseTimeAndDay;
@@ -70,14 +68,14 @@ public class BankBaisicInformation  implements java.io.Serializable {
     }
     
     /** full constructor */
-    public BankBaisicInformation(String bankName, String bankLogoPath, 
+    public BankBasicInformation(String bankName, String bankLogoPath, 
     		String bankBasicInformation, String openCloseTimeAndDay, 
     		String openAccountReturn, String yearlyFee,
     		String internationalTransferFee, String spendingLimitPerMonth, 
     		String cashWithdrawLimitPerMonth, String overspendLimit, 
     		String interestRateYouth, String interestRateGeneral,
-    		String interestRateOverspend, String hasOnlineBank, 
-    		BankAccountMgmt bankAccountMgmt) {
+    		String interestRateOverspend, String hasOnlineBank
+    		) {
         this.bankName = bankName;
         this.bankLogoPath = bankLogoPath;
         this.bankBasicInformation = bankBasicInformation;
@@ -92,7 +90,7 @@ public class BankBaisicInformation  implements java.io.Serializable {
         this.interestRateGeneral = interestRateGeneral;
         this.interestRateOverspend = interestRateOverspend;
         this.hasOnlineBank = hasOnlineBank;
-        this.bankAccountMgmt = bankAccountMgmt;
+      
     }
 
    
@@ -248,15 +246,7 @@ public class BankBaisicInformation  implements java.io.Serializable {
     public void setHasOnlineBank(String hasOnlineBank) {
         this.hasOnlineBank = hasOnlineBank;
     }
-	@OneToOne(fetch=FetchType.LAZY, mappedBy="bankBaisicInformation")
-
-    public BankAccountMgmt getBankAccountMgmt() {
-        return this.bankAccountMgmt;
-    }
-    
-    public void setBankAccountMgmt(BankAccountMgmt bankAccountMgmt) {
-        this.bankAccountMgmt = bankAccountMgmt;
-    }
+	
    
 
 

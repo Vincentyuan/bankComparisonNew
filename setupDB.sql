@@ -219,12 +219,12 @@ INSERT INTO `bankonlineservice` (`bankId`, `onlineBankServFee`, `SMSAlert`) VALU
 -- --------------------------------------------------------
 
 --
--- Structure de la table `banktransfertchequeservices`
+-- Structure de la table `banktransferservices`
 --
 
-CREATE TABLE IF NOT EXISTS `banktransfertchequeservices` (
+CREATE TABLE IF NOT EXISTS `banktransferservices` (
   `bankId` int(11) NOT NULL,
-  `banktransfertchequeservicesId` INT (11) NOT NULL AUTO_INCREMENT,
+  `banktransferservicesId` INT (11) NOT NULL AUTO_INCREMENT,
   `InternalTransfer` varchar(255) NOT NULL,
   `OccaSEPAEmission` varchar(255) NOT NULL,
   `OccaSEPAReception` varchar(255) NOT NULL,
@@ -236,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `banktransfertchequeservices` (
   `ChequeOrChequeBookOppositionBySender` varchar(255) NOT NULL,
   `IssueChequePayableInOtherCountries` varchar(255) NOT NULL,
   `ChequePaymentIssuedInForeignCountries` varchar(255) NOT NULL,
-  PRIMARY KEY (`banktransfertchequeservicesId`),
+  PRIMARY KEY (`banktransferservicesId`),
   KEY `bankId` (`bankId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=4;
 

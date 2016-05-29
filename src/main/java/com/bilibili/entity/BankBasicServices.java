@@ -26,7 +26,7 @@ public class BankBasicServices  implements java.io.Serializable {
     // Fields    
 
      private Integer bankbasicServiceId;
-     private BankBaisicInformation bankBaisicInformation;
+     private BankBasicInformation bankBaisicInformation;
      private String internetService;
      private String smsalert;
      private String immediateDebitCard;
@@ -48,7 +48,7 @@ public class BankBasicServices  implements java.io.Serializable {
 
     
     /** full constructor */
-    public BankBasicServices(BankBaisicInformation bankBaisicInformation, String internetService, String smsalert, String immediateDebitCard, String deferredDebitCard, String systAutorisationDebitCard, String otherBankAtm, String sepaoccTransf, String sepapayment, String interventionCommission, String insurance, String managementFee) {
+    public BankBasicServices(BankBasicInformation bankBaisicInformation, String internetService, String smsalert, String immediateDebitCard, String deferredDebitCard, String systAutorisationDebitCard, String otherBankAtm, String sepaoccTransf, String sepapayment, String interventionCommission, String insurance, String managementFee) {
         this.bankBaisicInformation = bankBaisicInformation;
         this.internetService = internetService;
         this.smsalert = smsalert;
@@ -79,11 +79,11 @@ public class BankBasicServices  implements java.io.Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
         @JoinColumn(name="bankId", nullable=false)
 
-    public BankBaisicInformation getBankBaisicInformation() {
+    public BankBasicInformation getBankBaisicInformation() {
         return this.bankBaisicInformation;
     }
     
-    public void setBankBaisicInformation(BankBaisicInformation bankBaisicInformation) {
+    public void setBankBaisicInformation(BankBasicInformation bankBaisicInformation) {
         this.bankBaisicInformation = bankBaisicInformation;
     }
     

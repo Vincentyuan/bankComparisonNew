@@ -31,7 +31,7 @@ public class BankManager  implements java.io.Serializable {
 
      private Integer managerId;
      private City city;
-     private BankBaisicInformation bankBaisicInformation;
+     private BankBasicInformation bankBaisicInformation;
      private String bankAddressDetail;
      private String firstName;
      private String lastName;
@@ -50,7 +50,7 @@ public class BankManager  implements java.io.Serializable {
     }
 
 	/** minimal constructor */
-    public BankManager(City city, BankBaisicInformation bankBaisicInformation, String lastName, String certifyStatus) {
+    public BankManager(City city, BankBasicInformation bankBaisicInformation, String lastName, String certifyStatus) {
         this.city = city;
         this.bankBaisicInformation = bankBaisicInformation;
         this.lastName = lastName;
@@ -58,7 +58,7 @@ public class BankManager  implements java.io.Serializable {
     }
     
     /** full constructor */
-    public BankManager(City city, BankBaisicInformation bankBaisicInformation,
+    public BankManager(City city, BankBasicInformation bankBaisicInformation,
     		String bankAddressDetail, String firstName,
     		String lastName, String email, String phone, 
     		String position, String agence, 
@@ -103,11 +103,11 @@ public class BankManager  implements java.io.Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
         @JoinColumn(name="bankId", nullable=false)
 
-    public BankBaisicInformation getBankBaisicInformation() {
+    public BankBasicInformation getBankBaisicInformation() {
         return this.bankBaisicInformation;
     }
     
-    public void setBankBaisicInformation(BankBaisicInformation bankBaisicInformation) {
+    public void setBankBaisicInformation(BankBasicInformation bankBaisicInformation) {
         this.bankBaisicInformation = bankBaisicInformation;
     }
     

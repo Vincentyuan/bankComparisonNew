@@ -20,13 +20,13 @@ import javax.persistence.Table;
     ,catalog="BILIBILI"
 )
 
-public class BankOlineService  implements java.io.Serializable {
+public class BankOnlineService  implements java.io.Serializable {
 
 
     // Fields    
 
      private Integer bankOnlineServiceId;
-     private BankBaisicInformation bankBaisicInformation;
+     private BankBasicInformation bankBaisicInformation;
      private String onlineBankServFee;
      private String smsalert;
 
@@ -34,12 +34,12 @@ public class BankOlineService  implements java.io.Serializable {
     // Constructors
 
     /** default constructor */
-    public BankOlineService() {
+    public BankOnlineService() {
     }
 
     
     /** full constructor */
-    public BankOlineService(BankBaisicInformation bankBaisicInformation, String onlineBankServFee, String smsalert) {
+    public BankOnlineService(BankBasicInformation bankBaisicInformation, String onlineBankServFee, String smsalert) {
         this.bankBaisicInformation = bankBaisicInformation;
         this.onlineBankServFee = onlineBankServFee;
         this.smsalert = smsalert;
@@ -61,11 +61,11 @@ public class BankOlineService  implements java.io.Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
         @JoinColumn(name="bankId", nullable=false)
 
-    public BankBaisicInformation getBankBaisicInformation() {
+    public BankBasicInformation getBankBaisicInformation() {
         return this.bankBaisicInformation;
     }
     
-    public void setBankBaisicInformation(BankBaisicInformation bankBaisicInformation) {
+    public void setBankBaisicInformation(BankBasicInformation bankBaisicInformation) {
         this.bankBaisicInformation = bankBaisicInformation;
     }
     

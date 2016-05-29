@@ -26,7 +26,7 @@ public class BankCardServices  implements java.io.Serializable {
     // Fields    
 
      private Integer bankcardservicesId;
-     private BankBaisicInformation bankBaisicInformation;
+     private BankBasicInformation bankBaisicInformation;
      private String visainfiniteCard;
      private String visagoldPremierCard;
      private String visamasterCard;
@@ -48,7 +48,7 @@ public class BankCardServices  implements java.io.Serializable {
 
     
     /** full constructor */
-    public BankCardServices(BankBaisicInformation bankBaisicInformation, String visainfiniteCard, String visagoldPremierCard, String visamasterCard, String collectorCardFee, String cardRenewalToAdress, String cashWithdrawalAnotherBankCounter, String cashWithdrawalAnotherBankAtm, String nonEuzonePayment, String nonEuzoneWithdrawal, String codeEditing, String oppositionFee) {
+    public BankCardServices(BankBasicInformation bankBaisicInformation, String visainfiniteCard, String visagoldPremierCard, String visamasterCard, String collectorCardFee, String cardRenewalToAdress, String cashWithdrawalAnotherBankCounter, String cashWithdrawalAnotherBankAtm, String nonEuzonePayment, String nonEuzoneWithdrawal, String codeEditing, String oppositionFee) {
         this.bankBaisicInformation = bankBaisicInformation;
         this.visainfiniteCard = visainfiniteCard;
         this.visagoldPremierCard = visagoldPremierCard;
@@ -79,11 +79,11 @@ public class BankCardServices  implements java.io.Serializable {
 	@ManyToOne(fetch=FetchType.LAZY)
         @JoinColumn(name="bankId", nullable=false)
 
-    public BankBaisicInformation getBankBaisicInformation() {
+    public BankBasicInformation getBankBaisicInformation() {
         return this.bankBaisicInformation;
     }
     
-    public void setBankBaisicInformation(BankBaisicInformation bankBaisicInformation) {
+    public void setBankBaisicInformation(BankBasicInformation bankBaisicInformation) {
         this.bankBaisicInformation = bankBaisicInformation;
     }
     

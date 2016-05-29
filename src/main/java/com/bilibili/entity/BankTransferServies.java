@@ -13,20 +13,20 @@ import javax.persistence.Table;
 
 
 /**
- * BankTransFertchChequeServies entity. @author MyEclipse Persistence Tools
+ * BankTransferServies entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name="banktransfertchequeservices"
+@Table(name="banktransferservices"
     ,catalog="BILIBILI"
 )
 
-public class BankTransFertchChequeServies  implements java.io.Serializable {
+public class BankTransferServies  implements java.io.Serializable {
 
 
     // Fields    
 
-     private Integer banktransfertchequeservicesId;
-     private BankBaisicInformation bankBaisicInformation;
+     private Integer banktransferservicesId;
+     private BankBasicInformation bankBaisicInformation;
      private String internalTransfer;
      private String occaSepaemission;
      private String occaSepareception;
@@ -43,12 +43,12 @@ public class BankTransFertchChequeServies  implements java.io.Serializable {
     // Constructors
 
     /** default constructor */
-    public BankTransFertchChequeServies() {
+    public BankTransferServies() {
     }
 
     
     /** full constructor */
-    public BankTransFertchChequeServies(BankBaisicInformation bankBaisicInformation, String internalTransfer, String occaSepaemission, String occaSepareception, String permanentSepaemission, String tipsepapaymentFee, String checkBookSentAtHomeFee, String bankChequeEmissionFee, String chequePhotocopy, String chequeOrChequeBookOppositionBySender, String issueChequePayableInOtherCountries, String chequePaymentIssuedInForeignCountries) {
+    public BankTransferServies(BankBasicInformation bankBaisicInformation, String internalTransfer, String occaSepaemission, String occaSepareception, String permanentSepaemission, String tipsepapaymentFee, String checkBookSentAtHomeFee, String bankChequeEmissionFee, String chequePhotocopy, String chequeOrChequeBookOppositionBySender, String issueChequePayableInOtherCountries, String chequePaymentIssuedInForeignCountries) {
         this.bankBaisicInformation = bankBaisicInformation;
         this.internalTransfer = internalTransfer;
         this.occaSepaemission = occaSepaemission;
@@ -67,23 +67,23 @@ public class BankTransFertchChequeServies  implements java.io.Serializable {
     // Property accessors
     @Id @GeneratedValue
     
-    @Column(name="banktransfertchequeservicesId", unique=true, nullable=false)
+    @Column(name="banktransferservicesId", unique=true, nullable=false)
 
-    public Integer getBanktransfertchequeservicesId() {
-        return this.banktransfertchequeservicesId;
+    public Integer getBanktransferservicesId() {
+        return this.banktransferservicesId;
     }
     
-    public void setBanktransfertchequeservicesId(Integer banktransfertchequeservicesId) {
-        this.banktransfertchequeservicesId = banktransfertchequeservicesId;
+    public void setBanktransferservicesId(Integer banktransferservicesId) {
+        this.banktransferservicesId = banktransferservicesId;
     }
 	@ManyToOne(fetch=FetchType.LAZY)
         @JoinColumn(name="bankId", nullable=false)
 
-    public BankBaisicInformation getBankBaisicInformation() {
+    public BankBasicInformation getBankBaisicInformation() {
         return this.bankBaisicInformation;
     }
     
-    public void setBankBaisicInformation(BankBaisicInformation bankBaisicInformation) {
+    public void setBankBaisicInformation(BankBasicInformation bankBaisicInformation) {
         this.bankBaisicInformation = bankBaisicInformation;
     }
     

@@ -22,7 +22,7 @@ import com.bilibili.util.HibernateUtil;
 @Controller
 public class CityController {
 
-	@RequestMapping(value = "/city", method = RequestMethod.GET)
+	@RequestMapping(value = "/City", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
 	@ResponseBody
 	

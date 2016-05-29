@@ -13,7 +13,34 @@
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
     
-     <mapping class="com.bilibili.entity.City"/>
-     <mapping class="com.bilibili.DTO.dataStructure"/>          
+
+     <mapping class="com.bilibili.DTO.dataStructure"/>              
+
+
+
+	
+	<mapping class="com.bilibili.entity.BankBasic" />
+	<mapping class="com.bilibili.entity.City" />
+
+	<mapping class="com.bilibili.entity.RequestSolidify" />
+	<mapping class="com.bilibili.entity.BankOnlineService" />
+	<mapping class="com.bilibili.entity.BankAccountMgmt" />
+	<mapping class="com.bilibili.entity.BankManager" />
+	<mapping class="com.bilibili.entity.BankAddress" />
+	<mapping class="com.bilibili.entity.GeneralUser" />
+	<mapping class="com.bilibili.entity.CommunicationTable" />
+	<mapping class="com.bilibili.entity.BankBasicInformation" />
+	<mapping class="com.bilibili.entity.BankBasicServices" />
+	<mapping class="com.bilibili.entity.Request" />
+	<mapping class="com.bilibili.entity.BankCardServices" />
+	<mapping class="com.bilibili.entity.RecommendPerson" />
+	<mapping class="com.bilibili.entity.BankTransferTchequeServices" />
+	<mapping class="com.bilibili.entity.School" />
+	
+	<mapping class="com.bilibili.entity.BankBaisicInformation" />
+	<mapping class="com.bilibili.entity.BankTransFertchChequeServies" />
+	<mapping class="com.bilibili.entity.BankOlineService" />
+    
+      
    </session-factory>
 </hibernate-configuration>

@@ -8,7 +8,7 @@
 -- Version de PHP :  5.5.12
 
 CREATE DATABASE  IF NOT EXISTS `BILIBILI`;
-use BILIBILI2;
+use BILIBILI;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";

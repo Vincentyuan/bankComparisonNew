@@ -424,12 +424,12 @@ ALTER TABLE `bankonlineservice`
 
 
 --
--- Contraintes pour la table `banktransfertchequeservices`
+-- Contraintes pour la table `banktransferservices`
 --
 
 
-ALTER TABLE `banktransfertchequeservices`
-  ADD CONSTRAINT  `banktransfertchequeservices_ibfk_1` FOREIGN KEY  (`bankId`) REFERENCES `bankbasicinformation`(`bankId`);
+ALTER TABLE `banktransferservices`
+  ADD CONSTRAINT  `banktransferservices_ibfk_1` FOREIGN KEY  (`bankId`) REFERENCES `bankbasicinformation`(`bankId`);
 
 
 --
